@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blogscript</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
 </head>
 <body>
 
@@ -12,14 +13,14 @@
     <!-- logo image & title-->
     <a href="#"><img class="blog-logo" src="images/coding.png" alt="logo" width="50px" height="50px"></a>
     <div class="blog-title_container">
-      <h2 id="title" class="blog-title">Blogscripting</h2>
+      <h2 class="blog-title">Blogscripting</h2>
       <h4 class="blog-subtitle">A Javascript Blog</h4>
     </div>
     <!-- navigation items -->
     <nav class="navbar" aria-label="Main Menu">
       <ul class="nav-menu">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"> <a class="nav-link" href="#">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a></li>
      </ul>
     </nav> 
      <!-- 'burguer' menu icon -->
@@ -28,11 +29,36 @@
        <span class="bar"></span>
        <span class="bar"></span>
     </button>
-  </header>
-  <main></main>
-  <footer></footer>
+   </header>
+    <!-- light/dark theme toggle button -->
+     <button class="theme-toggle">Switch Theme</button>
+    <!-- blog entry -->
+  <article class="blog-article" id="blog-article">
+    <h1 class="blog-article_title" id="blogHeading">JS:The basics.</h2>
+    <h3 class="blog-article_author" id="blogAuthor">By myself</h4>
+    <p class="blog-article_body">
+       JavaScript has primitives, objects and functions. All of them are values. 
+       All are treated as objects, even primitives.<br><br>
+       Primitives : Number, boolean, string, undefined and null are primitives.
+       Number : There is only one number type in JavaScript, the 64-bit binary floating point type. 
+       Decimal numbers’ arithmetic is inexact.<br><br>
+       As you may already know, 0.1 + 0.2 does not make 0.3 . But with integers, the arithmetic is exact, so 1+2 === 3 .<br><br>
+       Numbers inherit methods from the Number.prototype object. Methods can be called on numbers:
+    </p> 
+  </article>
+   <!-- new entry blog form -->
+  <form id="form" onsubmit="submitForm()">
+    <section>
+      <label class="labels" for="title">Title</label>
+      <input class="input-fields" type="text" id="title" name="title" required>
+      <label class="labels" for="author">Author</label>
+      <input class="input-fields" type="author" id="author" name="author" required>
+      <label class="textarea-label" for="body">Body</label>
+      <textarea id="body" name="body" rows="4" cols="50" placeholder="Create your entry here..." required></textarea>
+    </section>
+    <input class="button" type="submit" id="entrySubmit">
+  </form>
+
+<footer></footer>
 </body>
 </html>
-<!-- Script in footer as error in Chrome?-->
-<script src="index.js"></script>
-
