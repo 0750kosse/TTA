@@ -1,3 +1,4 @@
+// global consts
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const body = document.body;
@@ -64,10 +65,30 @@ art.append(btn)
   resetFields()
 }
 
+// resets new blog entry input fields
 function resetFields(){
   document.getElementById('title').value = "";
   document.getElementById('author').value = "";
   document.getElementById('body').value = "";
+}
+
+function submitEmail(){
+  event.preventDefault();
+  // grabs and encodes the user subject and email body inputs
+  let emailSubject = encodeURI(document.getElementById('subject').value);
+  let emailBody = encodeURI(document.getElementById('emailBody').value);
+  // opens mail client
+  window.location = `mailto:blogscripting@blogscripting.com?subject=${emailSubject}&body=${emailBody}`
+  // redirects to thank you page after 2 seconds
+  setTimeout( () => {window.location.href = 'thankyou.html'},2000)
+  // calls resets fields function
+  resetContactFields()
+}
+
+// resets contact us form input fields
+function resetContactFields(){
+  document.getElementById('subject').value = " ";
+  document.getElementById('emailBody').value = " ";
 }
 
 
