@@ -17,7 +17,12 @@ li {
 
 a {
   text-decoration: none;
+ 
 }
+
+li a {
+  color: #d9d9d9;
+} 
 
 header {
   display: flex;
