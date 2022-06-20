@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blogscript</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="index.js"></script>
 </head>
 <body>
 
   <header>
     <!-- logo image & title-->
-    <a href="#"><img class="blog-logo" src="images/coding.png" alt="logo" width="50px" height="50px"></a>
+    <a href="index.html"><img class="blog-logo" src="images/coding.png" alt="logo" width="50px" height="50px"></a>
     <div class="blog-title_container">
       <h2 class="blog-title">Blogscripting</h2>
       <h4 class="blog-subtitle">A Javascript Blog</h4>
@@ -19,8 +18,8 @@
     <!-- navigation items -->
     <nav class="navbar" aria-label="Main Menu">
       <ul class="nav-menu">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"> <a class="nav-link" href="contact.html">Contact Us</a></li>
      </ul>
     </nav> 
      <!-- 'burguer' menu icon -->
@@ -30,35 +29,50 @@
        <span class="bar"></span>
     </button>
    </header>
-    <!-- light/dark theme toggle button -->
+    <!-- scroll to form & light/dark theme toggle buttons -->
+    <div class="buttons">
+     <button class="add-entry"><a href="#form">Add entry</a></button>
      <button class="theme-toggle">Switch Theme</button>
+    </div>
+     
     <!-- blog entry -->
-  <article class="blog-article" id="blog-article">
-    <h1 class="blog-article_title" id="blogHeading">JS:The basics.</h2>
-    <h3 class="blog-article_author" id="blogAuthor">By myself</h4>
-    <p class="blog-article_body">
-       JavaScript has primitives, objects and functions. All of them are values. 
-       All are treated as objects, even primitives.<br><br>
-       Primitives : Number, boolean, string, undefined and null are primitives.
-       Number : There is only one number type in JavaScript, the 64-bit binary floating point type. 
-       Decimal numbers’ arithmetic is inexact.<br><br>
-       As you may already know, 0.1 + 0.2 does not make 0.3 . But with integers, the arithmetic is exact, so 1+2 === 3 .<br><br>
-       Numbers inherit methods from the Number.prototype object. Methods can be called on numbers:
-    </p> 
-  </article>
+    <div class="article-wrapper">
+      <article class="blog-article" id="blog-article">
+        <h1 class="blog-article_title" id="blogHeading">JS:The basics.</h1>
+        <h3 class="blog-article_author" id="blogAuthor">By myself</h3>
+        <p class="blog-article_body">
+          JavaScript has primitives, objects and functions. All of them are values. 
+          All are treated as objects, even primitives.<br><br>
+          Primitives : Number, boolean, string, undefined and null are primitives.
+          Number : There is only one number type in JavaScript, the 64-bit binary floating point type. 
+          Decimal numbers’ arithmetic is inexact.<br><br>
+          As you may already know, 0.1 + 0.2 does not make 0.3 . But with integers, the arithmetic is exact, so 1+2 === 3 .<br><br>
+          Numbers inherit methods from the Number.prototype object. Methods can be called on numbers:
+        </p> 
+      </article>
+      <article class="blog-article" id="blog-article">
+        <h1 class="blog-article_title" id="blogHeading">Primitives vs Objects.</h1>
+        <h3 class="blog-article_author" id="blogAuthor">By someone else</h3>
+        <p class="blog-article_body">
+          Primitives (except null and undefined) are treated like objects, in the sense that they have methods but they are not objects.<br><br>
+          Numbers, strings, and booleans have object equivalent wrappers. These are the Number, String, and Boolean functions.<br><br>
+          In order to allow access to properties on primitives, JavaScript creates an wrapper object and then destroys it. The process of creating and destroying wrapper objects is optimized by the JavaScript engine.
+          Primitives are immutable, and objects are mutable.<br><br>
+        </p> 
+      </article>
+    </div>
    <!-- new entry blog form -->
-  <form id="form" onsubmit="submitForm()">
-    <section>
+  <form id="form" method="post" onsubmit="submitForm()">
       <label class="labels" for="title">Title</label>
       <input class="input-fields" type="text" id="title" name="title" required>
       <label class="labels" for="author">Author</label>
       <input class="input-fields" type="author" id="author" name="author" required>
       <label class="textarea-label" for="body">Body</label>
       <textarea id="body" name="body" rows="4" cols="50" placeholder="Create your entry here..." required></textarea>
-    </section>
-    <input class="button" type="submit" id="entrySubmit">
+      <input class="button" type="submit" id="entrySubmit">
   </form>
 
 <footer></footer>
 </body>
+<script src="index.js"></script>
 </html>

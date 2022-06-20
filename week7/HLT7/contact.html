@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogscript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- logo image & title-->
+    <a href="index.html"><img class="blog-logo" src="images/coding.png" alt="logo" width="50px" height="50px"></a>
+    <div class="blog-title_container">
+      <h2 class="blog-title">Blogscripting</h2>
+      <h4 class="blog-subtitle">A Javascript Blog</h4>
+    </div>
+    <!-- navigation items -->
+    <nav class="navbar" aria-label="Main Menu">
+      <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"> <a class="nav-link" href="contact.html">Contact Us</a></li>
+     </ul>
+    </nav> 
+     <!-- 'burguer' menu icon -->
+    <button class="hamburger">
+       <span class="bar"></span>
+       <span class="bar"></span>
+       <span class="bar"></span>
+    </button>
+  </header>
+    <!-- light/dark theme toggle button -->
+     <button class="theme-toggle contact">Switch Theme</button>
+    <main id="contact" class="blog-article">
+      <h1 class="blog-article_title">Contact Us</h1>
+      <p>Chat to Us! Your feedback is very valuable!<br><br>
+      Send us an email and we will get back asap
+      </p>
+    </main>
+    <form id="contact-form" onsubmit="submitEmail()">
+      <section>
+        <label class="labels" for="subject">Email subject</label>
+        <input class="input-fields" type="text" id="subject" name="subject" required>
+        <label class="textarea-label" for="emailBody">Body</label>
+        <textarea id="emailBody" name="emailBody" rows="4" cols="50" placeholder="Leave us your commments..." required></textarea>
+      </section>
+     <input type="submit">
+    </form>
+    <footer></footer>
+</body>
+<script src="index.js"></script>
+</html>
