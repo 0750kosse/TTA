@@ -9,15 +9,20 @@ public class Task1 {
 		// Creates Scanner object
 		Scanner userInput = new Scanner(System.in);
 		System.out.println("Enter a number");
+		
 		// Reads user number/input
-		int userNumber = userInput.nextInt();
+		int userNumber = userInput.nextInt(); 
+		
+		System.out.println("Enter number of iterations"); 
+		
 		// Reads number of iterations
-		System.out.println("Enter number of iterations");
-		int userIterations = userInput.nextInt();
+		int userIterations = userInput.nextInt();			
 		System.out.println("The user number is " + userNumber + ", and will iterate " + userIterations + " times");
-		// Loops and displays times-table for the userNumber up to the number of userIterations
-		for (int i=0; i <= userIterations; i++) {
-			int timesTable = userNumber * i;	
+		
+		// Loops & displays table for the userNumber up to the number of userIterations
+		for (int i=0; i <= userIterations; i++) {			 
+			int timesTable = userNumber * i;				 
+				
 		System.out.println(userNumber + " * " + i + " = " + timesTable);
 		
 		}
