@@ -55,17 +55,19 @@ public class Task5 {
 		// ------ v ---------
 		System.out.println("Task v");
 		
-		for (int i = 1; i <= 5;  i++) {			// loop controlling column size
-			for(int j = i; j < 5; j++) {		// inner loop prints first white space triangle
+System.out.println("Task iii");
+		
+		for (int i = 0; i <= 5; i++) {			// loop controlling column size
+			for (int j = i; j < 5; j++) {		// inner loop prints first white space triangle
 				System.out.print(" ");
 			}
-			for (int k = 0; k < i; k++) {		// second inner loop prints left side triangle (i)
-				System.out.print(i);
+			for (int j = i; j <= i; j++) {	
+				for(int h = i; h <= i + 1; h++){
+					System.out.print(i);	
+				}// second inner loop prints actual triangle (*)
+				System.out.print(i);	
 			}
-			for (int l = 1; l < i ; l++) {		// second inner loop prints right side triangle (i)
-				System.out.print(i);
-			}
-			System.out.println();
+		System.out.println();
 		}
 		
 	}
