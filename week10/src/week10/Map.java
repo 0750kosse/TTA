@@ -15,6 +15,14 @@ public class Map {
 		return this.x = x;
 	}
 	
+	public int getCurrentX() {
+		return currentX;
+	}
+
+	public int getCurrentY() {
+		return currentY;
+	}
+
 	public int getY() {
 		return this.y;
 	}
@@ -80,8 +88,8 @@ public class Map {
 			this.currentY = this.y;
 		}
 		
-		if(this.currentX == 3 && this.currentY == 5) {
-			System.out.println("t > ## A baddie will appear");
+		if(this.currentX == 5 && this.currentY == 3) {
+			System.out.println("t > ## A baddie has  appeared!");
 		}
 		if (this.currentX == 5 && this.currentY == 5) {
 			System.out.println("\t > ## Congratulations!! You found the exit!");

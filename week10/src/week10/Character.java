@@ -17,6 +17,10 @@ public class Character {
 		this.startX = startX;
 		this.startY = startY;
 	}
+	
+	public void printDetails( ) {
+		System.out.println(this.name + "has " + this.maxHealth + " max health and " +  "has an attacking power of " + this.maxDamage);  
+	}
 
 	public String getName() {
 		return name;
@@ -31,16 +35,16 @@ public class Character {
 		return maxHealth;
 	}
 
-	public void setMaxHealth(int maxHealth) {
-		this.maxHealth = maxHealth;
+	public int setMaxHealth(int maxHealth) {
+		return this.maxHealth = maxHealth;
 	}
 
-	public int getMaxDamage() {
-		return maxDamage;
+	public int getMaxDamage(int maxDamage) {
+		return this.maxDamage = maxDamage;
 	}
 
-	public void setMaxDamage(int maxDamage) {
-		this.maxDamage = maxDamage;
+	public int setMaxDamage(int maxDamage) {
+		return this.maxDamage = maxDamage;
 	}
 
 	public int getLives() {
