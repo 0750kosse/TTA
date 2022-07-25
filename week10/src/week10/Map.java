@@ -15,14 +15,6 @@ public class Map {
 		return this.x = x;
 	}
 	
-	public int getCurrentX() {
-		return currentX;
-	}
-
-	public int getCurrentY() {
-		return currentY;
-	}
-
 	public int getY() {
 		return this.y;
 	}
@@ -30,14 +22,15 @@ public class Map {
 	public int setY(int y) {
 		return this.y = y;
 	}
+	
+	public int getCurrentX() {
+		return currentX;
+	}
 
-	public Map(int x, int y) {
-		this.x = x;
-		this.y = y;
+	public int getCurrentY() {
+		return currentY;
 	}
 	
-	
-	  
 	public int setCurrentX(int currentX) {
 		return this.currentX = currentX;
 	}
@@ -46,6 +39,14 @@ public class Map {
 		return this.currentY = currentY;
 	}
 
+	
+
+	public Map(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	
 	public void move(String direction) {
 		if (direction.equals("N")) {
 			if (this.currentY == this.y) {

@@ -8,9 +8,10 @@ public class Main {
 		
 		System.out.println("Welcome to the game");
 		String userDirection;
+		
+		//Random starting position
 		int startX = (int) (Math.random() * 10);
 		int startY = (int) (Math.random() * 10);
-		//boolean running = true;
 		
 		// Creates new character
 		Character goku = new Character("Goku",100, 50, 5, startX,startY);
@@ -24,6 +25,8 @@ public class Main {
 		System.out.println("Your starting position is: \n" +  "X:" + goku.setStartX(startX) + "-Y:" + goku.setStartY(startY));
 		System.out.println("----------------------------------");
 		System.out.println();
+		
+		// End game
 		boolean endGame =( gokuMap.getX() == 5 ) && (gokuMap.getY() == 5);
 		
 		gokuMap.setCurrentX(startX);
@@ -34,6 +37,7 @@ public class Main {
 
 			
 			while(!endGame) {
+				
 				System.out.println("Enter the player direction (N, S, W, E)");
 				userDirection = userInput.nextLine();
 				System.out.println("you chose to move " + userDirection);
@@ -56,7 +60,7 @@ public class Main {
 					switch(playerChoice) {
 					case "1":
 						if(damageReceived > damageCaused) goku.setMaxHealth(50);
-						System.out.println("damage caused is :" + damageCaused + ", damage received is: " + damageReceived + "your health is now " + goku.setMaxHealth(50) );
+						System.out.println("damage caused is :" + damageCaused + ", damage received is: " + damageReceived + " .Your health is now " + goku.setMaxHealth(50) );
 						
 						
 					}
