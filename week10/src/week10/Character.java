@@ -27,8 +27,8 @@ public class Character {
 	}
 
 	
-	public void setName(String name) {
-		this.name = name;
+	public String setName(String name) {
+		return this.name = name;
 	}
 
 	public int getMaxHealth() {
@@ -51,8 +51,8 @@ public class Character {
 		return lives;
 	}
 
-	public void setLives(int lives) {
-		this.lives = lives;
+	public int setLives(int lives) {
+		return this.lives = lives;
 	}
 	
 	public int setStartX(int startX) {
