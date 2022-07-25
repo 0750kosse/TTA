@@ -66,7 +66,6 @@ public class CharacterUnitTests {
 	int setLives = x.setLives(5);
 	assertEquals(5, setLives);
 	assertNotSame(13, setLives);
-	assertFalse(true);
 	}
 	
 	
